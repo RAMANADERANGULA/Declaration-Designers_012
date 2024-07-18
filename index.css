@@ -89,13 +89,15 @@ h1 {
     }
     25%,
     50% {
-        opacity: 1;
+        opacity: 0;
+    }
+    75% {
+        opacity: .7;
     }
     100% {
         transform: rotateX(0deg) rotateY(0deg) scale(1);
     }
 }
-
 
 
 /* FOOTER */
@@ -105,124 +107,147 @@ footer {
     padding: 20px 0;
     color: #fff;
     font-weight: 300;
-  }
-  .footer-container {
+}
+
+.footer-container {
     max-width: 1300px;
     margin: 0 auto;
     padding: 0 20px;
-  }
-  .footer-top, .footer-middle {
+}
+
+.footer-top,
+.footer-middle {
     text-align: center;
-  }
-  .footer-top {
+}
+
+.footer-top {
     padding-bottom: 20px;
-  }
-  .social-icons a {
+}
+
+.social-icons a {
     margin: 0 20px;
     color: #888;
     font-size: 1.7em;
     transition: color 0.3s;
-  }
-  .social-icons a:hover {
+}
+
+.social-icons a:hover {
     color: #fff;
-  }
-  .footer-middle {
+}
+
+.footer-middle {
     padding: 35px 0;
     border-top: 1px solid #fff;
     border-bottom: 1px solid #fff;
-  }
-  .footer-middle a {
+}
+
+.footer-middle a {
     margin: 0 30px;
     color: #fff;
     text-decoration: none;
-    font-size: 20px; 
+    font-size: 20px;
     font-weight: bold;
-  }
-  .footer-middle a:hover {
+}
+
+.footer-middle a:hover {
     text-decoration: underline;
-  }
-  .footer-bottom {
+}
+
+.footer-bottom {
     display: flex;
     flex-direction: column;
     padding: 20px 0;
-  }
-  .footer-bottom .links {
+}
+
+.footer-bottom .links {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     padding: 10px 0;
-  }
-  .footer-bottom h3 {
+}
+
+.footer-bottom h3 {
     color: #fff;
     margin-bottom: 8px;
     font-size: 18px;
     font-weight: bolder;
-  }
-  .footer-bottom .phone {
-    margin-bottom: 20px;
-  }
-
-.footer-bottom .number{
-  font-size: 23px;
 }
-  .footer-bottom a {
+
+.footer-bottom .phone {
+    margin-bottom: 20px;
+}
+
+.footer-bottom .number {
+    font-size: 23px;
+}
+
+.footer-bottom a {
     color: #888;
     margin-bottom: 5px;
     font-size: 14px;
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
-  }
-  .footer-bottom .time{
-    margin-top:5px;
+}
+
+.footer-bottom .time {
+    margin-top: 5px;
     color: #888;
     font-weight: bold;
+}
 
-  }
-  .footer-bottom a:hover {
+.footer-bottom a:hover {
     text-decoration: underline;
     text-decoration-color: #fff;
-  }
-  .footer-bottom a[href="https://in.sugarcosmetics.com/careers"]:hover {
-    color: #fff; 
+}
+
+.footer-bottom a[href="https://in.sugarcosmetics.com/careers"]:hover {
+    color: #fff;
     text-decoration: none;
-  }
-  .app-links {
+}
+
+.app-links {
     text-align: center;
     border-top: 1px solid #fff;
     border-bottom: 1px solid #fff;
     padding: 12px 0;
-  }
-  .app-links div {
+}
+
+.app-links div {
     display: inline-block;
     margin-right: 20px;
-  }
-  .app-links h4 {
+}
+
+.app-links h4 {
     margin-bottom: 5px;
     font-size: 23px;
     font-weight: 700;
-  }
-  .app-links p {
+}
+
+.app-links p {
     margin-top: 5px;
     font-size: 18px;
     color: grey;
     margin-right: 80px;
-  }
-  .app-links h4::after {
+}
+
+.app-links h4::after {
     display: block;
     width: 50%;
     margin: 10px auto;
     border-bottom: 2px solid #333;
-  }
-  .app-links img {
+}
+
+.app-links img {
     width: 170px;
     height: 50px;
     margin: 0 10px;
-    display: inline-block; 
-  }
-  .footer-bottom-line {
+    display: inline-block;
+}
+
+.footer-bottom-line {
     text-align: center;
     border-top: 1px solid #333;
     padding: 10px 0;
     color: #888;
-  }
+}
