@@ -3,13 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
+    <title>Vanilla Cosmatic</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -19,253 +13,215 @@
     />
     <style>
       body {
-        width: 100%;
-        background-color: black;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
       }
 
-      .container-fluid{
-        width: 100%;
-      }
-      .navbar {
-        padding: 0%;
-        margin: 0%;
-        width: 100%;
-        background-color: rgb(255, 0, 0);
-        justify-content: space-between;
-      }
-      .navbar-brand {
-        color: white;
-      }
-      .nav-link {
-        color: white;
+      header {
+        background-color: white;
+        border-bottom: 1px solid #ddd;
       }
 
-      .conatiner-Second {
-        width: 100%;
+      .top-nav {
         display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
       }
 
       .logo {
-        padding-left: 5%;
+        font-size: 30px;
         color: goldenrod;
-        font-size: xx-large;
+        font-weight: bold;
+      }
+
+      .top-links a {
+        margin: 0 10px;
         text-decoration: none;
-        font-style: italic;
+        color: black;
+        font-size: 16px;
       }
 
-      .search-bar {
-        padding-top: 8px;
-        padding-left: 10%;
-        width: 50%;
+      .search-cart {
+        display: flex;
+        align-items: center;
       }
 
-      .login-btn {
-        padding-top: 8px;
-        padding-right: 5px;
+      .search-cart input {
+        padding: 5px;
+        font-size: 16px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        margin-right: 10px;
+        width: 150px;
+        transition: width 0.3s ease;
+      }
+
+      .search-cart input:focus {
+        width: 250px;
+      }
+
+      .search-cart a {
+        margin-left: 10px;
+      }
+
+      .search-cart img {
+        width: 24px;
+        height: 24px;
+      }
+
+      .main-nav {
+        display: flex;
+        justify-content: space-around;
+        padding: 10px 0;
+        background-color: white;
+        border-top: 1px solid #ddd;
+      }
+
+      .main-nav a {
         text-decoration: none;
-        color: white;
-        font-size: xx-large;
-        display: inline;
+        color: black;
+        font-size: 16px;
       }
 
-      
-      .icons{
-          padding-top: 8px;
-          display:inline;
-          padding-right: 0%;
+      .hamburger-menu {
+        display: none;
+        cursor: pointer;
+        font-size: 24px;
+      }
+
+      /* Responsive Styles */
+      @media (max-width: 768px) {
+        .top-nav {
+          flex-direction: column;
+          align-items: flex-start;
         }
-        
-        .conatiner-third{
+
+        .top-links {
+          display: none;
+        }
+
+        .search-cart {
           width: 100%;
-          height: 100%;  
+          justify-content: space-between;
+          margin-top: 10px;
         }
-      
-        nav{
-        position: relative;
-        color: white;
-        /* justify-items: space-between; */
-        justify-content: space-between;
-        font-size: 20px;
-       } 
 
-       .slide-img{
-        width: 100%;
-        height: 250px;
-       }
-       
+        .hamburger-menu {
+          display: block;
+        }
+
+        .main-nav {
+          display: none;
+          flex-direction: column;
+          width: 100%;
+          text-align: left;
+          padding: 0;
+        }
+
+        .main-nav a {
+          padding: 10px 20px;
+          border-top: 1px solid #ddd;
+        }
+
+        .main-nav.active {
+          display: flex;
+        }
+      }
+
+      /* Features section styles */
+      .features {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 20px;
+        padding: 40px;
+      }
+
+      .feature {
+        text-align: center;
+      }
+
+      .feature img {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 10px;
+      }
+
+      @media (max-width: 768px) {
+        .features {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
     </style>
   </head>
   <body>
-    <div class="container-fluid">
-      <header>
-        <!-- first part -->
-        <nav class="navbar navbar-expand-lg">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-              B'day Special: Free Glitter Sling Bag on orders Rs. 999 & above
-            </a>
-            <!-- <a>
-                    B'day Exclusive Makeup Kit | 6 bestsellers @ 1699 ✨
-                  </a> -->
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNav"
-              aria-controls="navbarNav"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a class="nav-link" href="#">GET APP</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">STORE</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">GIFT CARD</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">HELP</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-
-        <!-- second part -->
-        <div class="conatiner-Second">
-          <div class="logo">
-            <!-- <img class="logo-img" src="./Images/Vanilla Logo.png"  alt="Logo" width="100%" height="100%"> -->
-            <a class="logo" href="#">Vanilla</a>
-          </div>
-
-          <div class="search-bar">
-            <nav class="navbar-sec">
-              <form class="container-fluid">
-                <div class="input-group">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Try Liquid Lipstick"
-                    aria-label="Username"
-                    aria-describedby="basic-addon1"
-                  />
-                  <span class="input-group-text" id="basic-addon1"
-                    ><i class="fa-solid fa-magnifying-glass"></i>Search</span
-                  >
-                </div>
-              </form>
-            </nav>
-          </div>
-
-          <div class="login">
-            <a class="login-btn" href="#">Login/Register</a>
-          </div>
-
-          <div class="icons">
-            <a href="#"><i class="fa-regular fa-heart"></i></a>
-            <a href="#"><i class="fa-regular fa-bag-shopping"></i></a>
-            <a href="#"><i class="fa-regular fa-heart"></i></a>
-
-          </div>
+    <header>
+      <div class="top-nav">
+        <div class="logo">Vanilla</div>
+        <div class="top-links">
+          <a href="#">Brands</a>
+          <a href="#">For You</a>
+          <a href="#">Tira Red</a>
+          <a href="#">Offers</a>
         </div>
-
-        <!-- third part -->
-        <div class="container-third">
-            <nav class="ṭhird-navbar navbar-expand-lg">
-                <div class="container-fluid">
-                 
-                  <div class="collapse navbar-collapse">
-                    <ul class="navbar-nav">
-                      <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">SUGAR PLAY</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">LIPS</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">EYES</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">FACE</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">NAILS</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">SKINCARE</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">ACCESSORIES</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">GIFTING</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">BESTSELLERS</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">NEW LAUNCHE</a>
-                      </li>
-                      
-                    </ul>
-                  </div>
-                </div>
-              </nav>
-
-              
+        <div class="search-cart">
+          <input type="text" placeholder="Search" />
+          <a href="#"><i class="fa-regular fa-bag-shopping"></i></a>
+          <a href="#"><i class="fa-regular fa-user"></i></a>
         </div>
-
-        <!-- slidebar -->
-        <div class="container-slidebar">
-            <div class="slidebar">
-                <div id="carouselExampleDark" class="carousel carousel-dark slide">
-                    <div class="carousel-indicators">
-                      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                    </div>
-                    <div class="carousel-inner">
-                      <div class="carousel-item active" data-bs-interval="10000">
-                        <img src="../Project/Images/img1.jpg" class="slide-img" alt="foundation Image" width="100%" height="100%">
-                        <div class="carousel-caption d-none d-md-block">
-                          <h5>First slide label</h5>
-                          <p>Some representative placeholder content for the first slide.</p>
-                        </div>
-                      </div>
-                      <div class="carousel-item" data-bs-interval="2000">
-                        <img src="../Project/Images/foundation img.jpg" class="slide-img" alt="">
-                        <div class="carousel-caption d-none d-md-block">
-                          <h5>Second slide label</h5>
-                          <p>Some representative placeholder content for the second slide.</p>
-                        </div>
-                      </div>
-                      <div class="carousel-item">
-                        <img src="../Project/Images/Vanilla Logo.png" class="slide-img" alt="">
-                        <div class="carousel-caption d-none d-md-block">
-                          <h5>Third slide label</h5>
-                          <p>Some representative placeholder content for the third slide.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
-                    </button>
-                  </div>
-            </div>
+        <div class="hamburger-menu">
+          <span>&#9776;</span>
         </div>
+      </div>
+      <nav class="main-nav">
+        <a href="#">What's New</a>
+        <a href="#">Makeup</a>
+        <a href="#">Skin</a>
+        <a href="#">Hair</a>
+        <a href="#">Fragrance</a>
+        <a href="#">Men</a>
+        <a href="#">Bath & Body</a>
+        <a href="#">Tools & Appliances</a>
+        <a href="#">Mom & Baby</a>
+        <a href="#">Minis</a>
+        <a href="#">Homegrown</a>
+      </nav>
+    </header>
 
-      </header>
-    </div>
+    <section class="features">
+      <div class="feature">
+        <img
+          src="https://cdn.tirabeauty.com/v2/billowing-snowflake-434234/tira-p/wrkr/company/1/applications/62d53777f5ad942d3e505f77/theme/pictures/free/original/theme-image-1672163850249.png"
+          alt="Authentic"
+        />
+        <h3>100% Authentic</h3>
+        <p>All our products are directly sourced from brands</p>
+      </div>
+      <div class="feature">
+        <img
+          src="https://cdn.tirabeauty.com/v2/billowing-snowflake-434234/tira-p/wrkr/company/1/applications/62d53777f5ad942d3e505f77/theme/pictures/free/original/theme-image-1672160879402.png"
+          alt="Free shipping"
+        />
+        <h3>Free Shipping</h3>
+        <p>On all orders above ₹299</p>
+      </div>
+      <div class="feature">
+        <img
+          src="https://cdn.tirabeauty.com/v2/billowing-snowflake-434234/tira-p/wrkr/company/1/applications/62d53777f5ad942d3e505f77/theme/pictures/free/original/theme-image-1672160905809.png"
+          alt="Certified Beauty Advisors"
+        />
+        <h3>Certified Beauty Advisors</h3>
+        <p>Get expert consultations</p>
+      </div>
+      <div class="feature">
+        <img
+          src="https://cdn.tirabeauty.com/v2/billowing-snowflake-434234/tira-p/wrkr/company/1/applications/62d53777f5ad942d3e505f77/theme/pictures/free/original/theme-image-1672160946022.png"
+          alt="Easy Returns"
+        />
+        <h3>Easy Returns</h3>
+        <p>Hassle-free pick-ups and refunds</p>
+      </div>
+    </section>
   </body>
 </html>
