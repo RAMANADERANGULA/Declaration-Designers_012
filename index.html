@@ -6,6 +6,204 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Footer Layout</title>
+  <script src="https://kit.fontawesome.com/bf60b033ea.js" crossorigin="anonymous"></script>
+  <style>
+    footer {
+      background-color: #111;
+      padding: 20px 0;
+      color: #fff;
+    }
+    .footer-container {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .footer-top, .footer-middle {
+      text-align: center;
+    }
+    .footer-top {
+      padding-bottom: 20px;
+    }
+    .social-icons a {
+      margin: 0 20px;
+      color: #888;
+      font-size: 1.7em;
+      transition: color 0.3s;
+    }
+    .social-icons a:hover {
+      color: #fff;
+    }
+    .footer-middle {
+      padding: 35px 0;
+      border-top: 1px solid #fff;
+      border-bottom: 1px solid #fff;
+    }
+    .footer-middle a {
+      margin: 0 30px;
+      color: #fff;
+      text-decoration: none;
+      font-size: 20px; 
+      font-weight: bold;
+    }
+    .footer-middle a:hover {
+      text-decoration: underline;
+    }
+    .footer-bottom {
+      display: flex;
+      flex-direction: column;
+      padding: 20px 0;
+    }
+    .footer-bottom .links {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 10px 0;
+    }
+    .footer-bottom h3 {
+      color: #fff;
+      margin-bottom: 8px;
+      font-size: 18px;
+      font-weight: bolder;
+    }
+    .footer-bottom .phone {
+      margin-bottom: 20px;
+    }
+
+  .footer-bottom .number{
+    font-size: 23px;
+  }
+    .footer-bottom a {
+      color: #888;
+      margin-bottom: 5px;
+      font-size: 14px;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .footer-bottom .time{
+      margin-top:5px;
+      color: #888;
+      font-weight: bold;
+
+    }
+    .footer-bottom a:hover {
+      text-decoration: underline;
+      text-decoration-color: #fff;
+    }
+    .footer-bottom a[href="https://in.sugarcosmetics.com/careers"]:hover {
+      color: #fff; 
+      text-decoration: none;
+    }
+    .app-links {
+      text-align: center;
+      border-top: 1px solid #fff;
+      border-bottom: 1px solid #fff;
+      padding: 12px 0;
+    }
+    .app-links div {
+      display: inline-block;
+      margin-right: 20px;
+    }
+    .app-links h4 {
+      margin-bottom: 5px;
+      font-size: 23px;
+      font-weight: 700;
+    }
+    .app-links p {
+      margin-top: 5px;
+      font-size: 18px;
+      color: grey;
+      margin-right: 80px;
+    }
+    .app-links h4::after {
+      display: block;
+      width: 50%;
+      margin: 10px auto;
+      border-bottom: 2px solid #333;
+    }
+    .app-links img {
+      width: 170px;
+      height: 50px;
+      margin: 0 10px;
+      display: inline-block; 
+    }
+    .footer-bottom-line {
+      text-align: center;
+      border-top: 1px solid #333;
+      padding: 10px 0;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <footer>
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="social-icons">
+          <a href="https://www.facebook.com/trySUGAR/"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://www.tumblr.com/sugarcosmetics-blog"><i class="fa-brands fa-tumblr"></i></a>
+          <a href="https://www.youtube.com/channel/UCKVqnev2idvmUNKc2b91B8g"><i class="fa-brands fa-youtube"></i></a>
+          <a href="https://x.com/trySUGAR"><i class="fa-brands fa-twitter"></i></a>
+          <a href="https://www.instagram.com/trysugar/?hl=en"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-solid fa-envelope"></i></a>
+          <a href="https://www.pinterest.com/sugarcosmetics/"><i class="fa-brands fa-pinterest"></i></a>
+        </div>
+      </div>
+      <div class="footer-middle">
+        <a href="https://in.sugarcosmetics.com/stores">Stores</a>
+        <a href="https://in.sugarcosmetics.com/pages/elite">Elite</a>
+        <a href="https://in.sugarcosmetics.com/pages/terms-conditions">Terms & Conditions</a>
+        <a href="https://in.sugarcosmetics.com/pages/returns-refunds">Returns</a>
+        <a href="https://in.sugarcosmetics.com/pages/faqs">FAQs</a>
+        <a href="https://in.sugarcosmetics.com/pages/about-us">About Us</a>
+      </div>
+      <div class="footer-bottom">
+        <h2>GET IN TOUCH</h2>
+        <div class="links">
+          <div>
+            <h3 class="phone">Call us at</h3>
+            <a class="number">1800-209-9933</a>
+            <p class="time">Monday to Friday: 09:00 AM - 09:00 PM <br> Saturday: 09:00 AM - 07:00 PM</p>
+          </div>
+          <div>
+            <h3>Support</h3>
+            <a href="mailto:hello@sugarcosmetics.com">hello@sugarcosmetics.com</a>
+          </div>
+          <div>
+            <h3>Careers</h3>
+            <a href="https://in.sugarcosmetics.com/careers">We're hiring!</a>
+          </div>
+          <div>
+            <h3>Press & Media</h3>
+            <a href="mailto:pr@sugarcosmetics.com">pr@sugarcosmetics.com</a>
+          </div>
+          <div>
+            <h3>Influencer Collab</h3>
+            <a href="https://docs.google.com/forms/d/10QqWLG-_x61g8xXcCOd856iap1feiMgFmWcXhVxDWk0/viewform?edit_requested=true">Join Us</a>
+          </div>
+        </div>
+      </div>
+      <div class="app-links">
+        <div>
+          <h4>GET THE NEW SUGAR APP TODAY!</h4>
+          <p>Tap into a better shopping experience.</p>
+        </div>
+        <a href="https://sugarcosmetics.app.link/WebFApp"><img src="https://in.sugarcosmetics.com/playstore.png" alt="Google Play"></a>
+        <a href="https://sugarcosmetics.app.link/WebFApp"><img src="https://in.sugarcosmetics.com/apple-store.png" alt="App Store"></a>
+      </div>
+      <div class="footer-bottom-line">
+        <p>Copyright &copy; 2024 SUGAR Cosmetics. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
+
 </body>
 </html>
