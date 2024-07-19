@@ -18,6 +18,24 @@ nav {
     border-bottom: 1px solid rgb(240, 240, 240);
 }
 
+@media (width <=950px) {
+    nav a,
+    nav input,
+    nav i {
+        display: none;
+    }
+    .genuine {
+        display: flex;
+        flex-direction: column;
+        padding: 0px 0px;
+        width: 60%;
+        margin: auto;
+        align-content: center;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
 .nav {
     display: flex;
     justify-content: space-between;
