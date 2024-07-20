@@ -16,6 +16,16 @@ nav {
     z-index: 1;
     background-color: white;
     border-bottom: 1px solid rgb(240, 240, 240);
+    animation: nav 2s forwards;
+}
+
+@keyframes nav {
+    0% {
+        transform: scale(2) translateY(-100%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
 }
 
 nav #hamb {
@@ -54,13 +64,13 @@ nav #hamb {
     text-decoration: none;
     color: black;
     margin-left: 4rem;
-    transition: all .1s ease-in-out;
+    transition: all 1s ease-in-out;
     box-sizing: border-box;
+    padding-bottom: 3px;
 }
 
 .nav div:nth-child(1) a:hover {
     color: rgb(213, 40, 10);
-    padding-bottom: 3px;
     border-bottom: 1px solid rgb(213, 40, 10);
 }
 
@@ -96,19 +106,8 @@ nav h1 {
     margin: 0px;
     font-family: 'Lobster', cursive;
     font-style: normal;
-    animation: s1 3s forwards;
     transition: transform 2s ease;
-}
-
-@keyframes s1 {
-    0% {
-        opacity: 0;
-        transform: translateX(-100%);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
+    cursor: pointer;
 }
 
 .slider {
@@ -159,8 +158,8 @@ nav h1 {
 .images {
     display: flex;
     width: 100%;
-    animation: a2 30s infinite;
-    transition: transform 5s ease;
+    animation: a2 18s infinite;
+    transition: transform 4s ease;
 }
 
 .images img {
@@ -183,6 +182,12 @@ nav h1 {
     border-radius: 20px;
     max-width: 300px;
     cursor: pointer;
+}
+
+@media(width<=700px) {
+    .birthdaycombos .scroller img {
+        max-width: 200px;
+    }
 }
 
 .scroller h1 {
@@ -215,9 +220,18 @@ nav h1 {
     width: 100%;
 }
 
+.newon div div {
+    min-width: 320px;
+    max-width: 25.5vw;
+    flex: 0 0 auto;
+    height: auto;
+    box-sizing: border-box;
+}
+
 .newon>div img {
     border-radius: .9rem;
-    width: 23rem;
+    width: 100%;
+    height: auto;
     cursor: pointer;
 }
 
@@ -235,25 +249,35 @@ nav h1 {
     overflow-x: scroll;
 }
 
-
-/*
-body {
+.newon,
+.onlyon,
+.birthdaycombos,
+.topcategories,
+.monsoon,
+.handpicked,
+.shelf,
+.wishlist,
+.brandstoknow,
+.hiddengems,
+.treats,
+.genuine,
+.slider,
+.red {
     animation: appear linear;
     animation-timeline: view();
-    animation-range: entry 0% cover 30%;
+    animation-range: entry 0% cover 40%;
 }
 
 @keyframes appear {
     0% {
         opacity: 0;
-        transform: translateX(-100%);
+        transform: scale(0) translateY(100%);
     }
-    10% {
+    100% {
         opacity: 1;
-        transform: translateX(0%);
+        transform: scale(1) translateY(0%);
     }
 }
-*/
 
 .categories::-webkit-scrollbar {
     display: none;
@@ -297,9 +321,19 @@ body {
     width: 20rem;
 }
 
-.handpicked div img {
-    width: 23rem;
-    border-radius: 10px;
+.handpicked div div {
+    min-width: 320px;
+    max-width: 25.5vw;
+    flex: 0 0 auto;
+    height: auto;
+    box-sizing: border-box;
+}
+
+.handpicked>div img {
+    border-radius: .9rem;
+    width: 100%;
+    height: auto;
+    cursor: pointer;
 }
 
 .wishlist>div::-webkit-scrollbar {
@@ -343,9 +377,18 @@ body {
     width: 100%;
 }
 
+.onlyon div div {
+    min-width: 320px;
+    max-width: 25.5vw;
+    flex: 0 0 auto;
+    height: auto;
+    box-sizing: border-box;
+}
+
 .onlyon>div img {
     border-radius: .9rem;
-    width: 23rem;
+    width: 100%;
+    height: auto;
     cursor: pointer;
 }
 
@@ -356,7 +399,7 @@ body {
     background-color: rgb(138, 101, 93);
     color: white;
     padding: 3rem;
-    font-family: "poppins" sans-serif;
+    font-family: "Poppins", sans-serif;
     border-radius: 10px;
     font-size: large;
 }
@@ -369,14 +412,45 @@ body {
 .shelf>div {
     display: flex;
     gap: 10px;
-    overflow-x: scroll;
+    overflow-x: auto;
     max-width: 100%;
 }
 
+.shelf div div {
+    min-width: 15rem;
+    max-width: 24vw;
+    flex: 0 0 auto;
+    height: auto;
+    box-sizing: border-box;
+}
+
 .shelf>div img {
-    border-radius: .9rem;
-    width: 24vw;
+    width: 100%;
+    height: auto;
+    border-radius: 0.9rem;
     cursor: pointer;
+}
+
+.shelf>div,
+.hiddengems>div,
+.brandstoknow>div,
+.onlyon>div,
+.handpicked>div,
+.newon>div,
+.topcategories>div,
+.wishlist>div {
+    scroll-snap-type: x mandatory;
+}
+
+.shelf div div,
+.hiddengems div div,
+.brandstoknow div div,
+.onlyon div div,
+.handpicked div div,
+.newon div div,
+.topcategories div div,
+.wishlist div div {
+    scroll-snap-align: start;
 }
 
 .wishlist {
@@ -390,9 +464,18 @@ body {
     width: 100%;
 }
 
+.wishlist div div {
+    min-width: 320px;
+    max-width: 23vw;
+    flex: 0 0 auto;
+    height: auto;
+    box-sizing: border-box;
+}
+
 .wishlist>div img {
-    border-radius: .5rem;
-    width: 17rem;
+    border-radius: .9rem;
+    width: 100%;
+    height: auto;
     cursor: pointer;
 }
 
@@ -422,9 +505,28 @@ body {
     overflow: scroll;
 }
 
-.brandstoknow img {
-    width: 21rem;
-    border-radius: 10px;
+.brandstoknow>div div {
+    min-width: 290px;
+    width: 20rem;
+    flex: 1 1 auto;
+    height: auto;
+    box-sizing: border-box;
+    scroll-snap-align: start;
+}
+
+.brandstoknow div div {
+    min-width: 250px;
+    max-width: 26vw;
+    flex: 1 1 auto;
+    height: auto;
+    box-sizing: border-box;
+}
+
+.brandstoknow>div img {
+    border-radius: .9rem;
+    width: 100%;
+    height: auto;
+    cursor: pointer;
 }
 
 .brandstoknow h2 {
@@ -444,10 +546,68 @@ body {
     width: 100%;
 }
 
+.hiddengems>div div {
+    min-width: 300px;
+    width: 20rem;
+    flex: 1 1 auto;
+    height: auto;
+    box-sizing: border-box;
+    scroll-snap-align: start;
+}
+
 .hiddengems>div img {
+    width: 100%;
     border-radius: .9rem;
-    max-width: 23rem;
+    max-width: 100%;
     cursor: pointer;
+}
+
+.hiddengems>div p {
+    text-align: center;
+}
+
+.red {
+    display: flex;
+    background-color: hsl(15, 69%, 86%);
+    justify-content: space-between;
+    margin-block: 40px;
+    border-radius: 10px;
+    padding: 40px;
+    padding-bottom: 0px;
+}
+
+.red div:nth-child(1) img {
+    max-width: 100px;
+}
+
+.red div:nth-child(1) h4 {
+    font-weight: 400;
+}
+
+.red div:nth-child(2) {
+    max-width: 40vw;
+    min-width: 300px;
+    height: auto;
+}
+
+.red div:nth-child(2) img {
+    width: 100%;
+    position: relative;
+    top: -20%;
+    border-radius: 10px;
+}
+
+@media(width<=600px) {
+    .red {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+    }
+    .red div:nth-child(2) {
+        top: 0%;
+        align-self: center;
+        justify-self: center;
+    }
 }
 
 .treats {
@@ -752,7 +912,6 @@ footer-section h4 {
 .social-media {
     display: flex;
     gap: 25px;
-    /* Adjusted gap */
 }
 
 .social-media a {
@@ -761,5 +920,34 @@ footer-section h4 {
 
 .social-media i {
     font-size: 1.5em;
-    /* Increased icon size */
+}
+
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 1rem;
+    }
+    h2 {
+        font-size: 1.75rem;
+    }
+    h4 {
+        font-size: 1rem;
+    }
+    p {
+        font-size: 0.875rem;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.875rem;
+    }
+    h4 {
+        font-size: 1rem;
+    }
+    p {
+        font-size: 0.9375rem;
+    }
 }
