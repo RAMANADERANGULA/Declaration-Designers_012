@@ -1,0 +1,1274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanilla</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: Inter;
+            color: #05073C;
+        }
+
+        header{
+            background-image: url(./stocks/background.svg);
+            background-size: cover;
+            margin: auto;
+            height: 800px;
+        }
+
+        header>nav{
+            max-width: 1320px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content:space-between;
+            height: 88px;
+            left: 300px;
+            padding: 21.94px 15px 21.93px 15px;
+            gap: 0px;
+            opacity: 0px;
+        }
+
+        header>nav div:nth-of-type(1){
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            gap: 40px;
+        }
+
+        header>nav div:nth-of-type(2){
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            gap: 20px;
+        }
+
+        header>nav>div> span{
+            font-family: Inter;
+            font-size: 14.77px;
+            font-weight: 400;
+            line-height: 28.13px;
+            text-align: left;
+            color: #05073C;
+        }
+
+        header>nav>div> span:hover{
+            color: #EB662B;
+            font-weight: 500;
+        }
+
+        #login{
+            border: 2px solid #05073C;
+            width: 100.31px;
+            height: 44px;
+            left: 284.61px;
+            padding: 5.9px 20.8px 15px 26px;
+            border-radius: 200px;
+            border: 1px 0px 0px 0px;
+            /* opacity: 0px; */
+        }
+
+        #login:hover{
+            border: 2px solid #EB662B;
+        }
+
+        #content{
+            max-width: 1320px;
+            margin: auto;
+            position: relative;
+            z-index: 0;
+        }
+
+        div#content>div h1{
+            width: 400px;font-size: 50px;
+            max-width: 1320px;
+            z-index: 1;
+            color: #05073C;
+        }
+
+        div#content>div p{
+            color: #05073C;
+        }
+
+        div#content>div{
+            margin-top: 100px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .brush{
+            position: relative;
+            left: 40px;
+            top: -20px;
+            z-index: -1;
+        }
+
+        
+    .hero_farm {
+        max-width: 1100px;
+        margin: auto;
+        width: 70%;
+        display: flex;
+        padding: 10px;
+        flex-wrap: wrap;
+        margin: auto;
+        justify-content: space-between;
+        border-radius: 200px;
+        background-color: #FFFFFF;
+        box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.0509803922);
+        align-items: center;
+        position: relative;
+        right: 100px;
+    }
+
+    .hero_farm .cyrcle {
+        width: 50px;
+        height: 50px;
+        border-radius: 200px;
+        background-color: #EB662B;
+    }
+
+    .hero_farm .searchitem_button {
+        width: 20%;
+        height: auto;
+        top: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero_farm .searchitem_button .cyrcle1 {
+    width: 50px;
+    height: 50px;
+    padding: 15px 14.8px 15px 15px;
+    border-radius: 50px;
+    background-color: rgba(235, 102, 43, 0.0509803922);
+    }
+
+    .hero_farm .searchitem_button span {
+    font-family: Inter;
+    font-size: 14.88px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: left;
+    margin-left: 10px;
+    color: #05073C;
+    }
+
+    .hero_farm .searchitem_button p {
+    font-family: Inter;
+    font-size: 12.5px;
+    font-weight: 400;
+    line-height: 19.6px;
+    margin-left: 10px;
+    margin-top: -2px;
+    text-align: left;
+    color: #717171;
+    }
+
+    header>div#blocks{
+        position: relative;
+        margin: auto;
+        max-width: 670px;
+        left: 103px;
+        right: 0px;
+        bottom: 300px;
+        display: flex;
+        gap: 10px;
+        /* border: 1px solid black; */
+    }
+
+    header>div#blocks img{
+        max-width: 90%;
+        margin: auto;
+        height: auto;
+    }    
+
+    header>div#blocks div:nth-of-type(1){
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .bl{
+        height: 300px;
+    }
+
+    div#contents{
+        max-width: 1320px;
+        margin: auto;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    div#b>div:nth-of-type(1){
+        max-width: 1320px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 30px;
+        p{
+            position: relative;
+            right: 50px;
+        }
+    }
+
+    #bls{
+        position: relative;
+        max-width: 1320px;
+        margin: auto;
+        display: grid;
+        grid-template-areas: "a1 a2 a3 a4 a5 a6";
+        margin-bottom: 100px;
+    }
+
+    #bls>div:nth-of-type(1){
+        width: 190px;
+        height: 219.98px;
+        border-radius: 12px;
+        background-image: linear-gradient(180deg, rgba(250,250,251,0) 0%, rgba(5,7,60,0.6867121848739496) 100%), url("./stocks/City Tours.svg");
+        font-size: 17.58px;
+        grid-area: a1;
+        text-align: center;
+        p{
+            position: relative;
+            top: -60px;
+            color: white;
+            text-shadow: #070707;
+        }
+
+        p:nth-of-type(2){
+            font-size: 13.23px;
+            font-weight: 200;
+        }
+        
+        img{
+            position: relative;
+            z-index: -1;
+        }
+    }
+
+    #bls>div:nth-of-type(2){
+        width: 190px;
+        height: 219.98px;
+        border-radius: 12px;
+        background-image: linear-gradient(180deg, rgba(250,250,251,0) 0%, rgba(5,7,60,0.6867121848739496) 100%), url("./stocks/Cultural\ Tours.svg");
+        font-size: 17.58px;
+        grid-area: a2;
+        text-align: center;
+        p{
+            position: relative;
+            top: -60px;
+            color: white;
+            text-shadow: #070707;
+        }
+
+        p:nth-of-type(2){
+            font-size: 13.23px;
+            font-weight: 200;
+        }
+        
+        img{
+            position: relative;
+            z-index: -1;
+        }
+    }
+
+    #bls>div:nth-of-type(3){
+        width: 190px;
+        height: 219.98px;
+        border-radius: 12px;
+        background-image: linear-gradient(180deg, rgba(250,250,251,0) 0%, rgba(5,7,60,0.6867121848739496) 100%), url("./stocks/Day\ Cruises.svg");
+        font-size: 17.58px;
+        grid-area: a3;
+        text-align: center;
+        p{
+            position: relative;
+            top: -60px;
+            color: white;
+            text-shadow: #070707;
+        }
+
+        p:nth-of-type(2){
+            font-size: 13.23px;
+            font-weight: 200;
+        }
+        
+        img{
+            position: relative;
+            z-index: -1;
+        }
+    }
+
+    #bls>div:nth-of-type(4){
+        width: 190px;
+        height: 219.98px;
+        border-radius: 12px;
+        background-image: linear-gradient(180deg, rgba(250,250,251,0) 0%, rgba(5,7,60,0.6867121848739496) 100%), url("./stocks/Bus\ Tours.svg");
+        font-size: 17.58px;
+        grid-area: a4;
+        text-align: center;
+        p{
+            position: relative;
+            top: -60px;
+            color: white;
+            text-shadow: #070707;
+        }
+
+        p:nth-of-type(2){
+            font-size: 13.23px;
+            font-weight: 200;
+        }
+        
+        img{
+            position: relative;
+            z-index: -1;
+        }
+    }
+
+    #bls>div:nth-of-type(5){
+        width: 190px;
+        height: 219.98px;
+        border-radius: 12px;
+        background-image: linear-gradient(180deg, rgba(250,250,251,0) 0%, rgba(5,7,60,0.6867121848739496) 100%), url("./stocks/beach.svg");
+        font-size: 17.58px;
+        grid-area: a5;
+        text-align: center;
+        p{
+            position: relative;
+            top: -60px;
+            color: white;
+            text-shadow: #070707;
+        }
+
+        p:nth-of-type(2){
+            font-size: 13.23px;
+            font-weight: 200;
+        }
+        
+        img{
+            position: relative;
+            z-index: -1;
+        }
+    }
+
+    #bls>div:nth-of-type(6){
+        width: 190px;
+        height: 219.98px;
+        border-radius: 12px;
+        background-image: linear-gradient(180deg, rgba(250,250,251,0) 0%, rgba(5,7,60,0.6867121848739496) 100%), url("./stocks/FoodTour.svg");
+        font-size: 17.58px;
+        grid-area: a6;
+        text-align: center;
+        p{
+            position: relative;
+            top: -60px;
+            color: white;
+            text-shadow: #070707;
+        }
+
+        p:nth-of-type(2){
+            font-size: 13.23px;
+            font-weight: 200;
+        }
+        
+        img{
+            position: relative;
+            z-index: -1;
+        }
+    }
+
+    div#b1>div:nth-of-type(1){
+        max-width: 1320px;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 30px;
+        input{
+            position: relative;
+            right: 50px;
+            width: 220px;
+            height: 60px;
+            padding: 15.94px 20.8px 15.93px 21px;
+            border-radius: 12px;
+            border: 1px solid #E7E6E6;
+        }
+
+        ::placeholder{
+            color: #05073C;
+        }
+    }
+
+    #bls1{
+        position: relative;
+        max-width: 1320px;
+        margin: auto;
+        display: grid;
+        grid-template-areas: "a1 a2 a3 a4";
+        margin-bottom: 100px;
+    }
+
+    .line{
+        display: flex;
+        justify-content: space-between;
+        p{
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 24.38px;
+        text-align: left;
+        }
+        span{
+            font-size: 14.5px;
+            font-weight: 500;
+            line-height: 30px;
+            text-align: left;
+        }
+    }
+
+    #bls1>div:nth-of-type(1){
+        grid-area: a1;
+        height: 365px;
+        width: 300px;
+        border: 1px solid #E7E6E6;
+        border-radius: 10px;
+        img{
+            position: relative;
+            left: 0.9px;
+            bottom: 0.8px;
+            border-radius: 10px 10px 0px 0px;
+        }
+
+        div{
+            padding: 5px 20px 5px 20px;
+            h2{
+                padding-top: 5px;
+                padding-bottom: 5px;
+                font-size: 15px;
+                font-weight: 600;
+                line-height: 25px;
+            }
+        }
+
+    }
+
+    .tag{
+        position: relative;
+        left: 20px;
+        font-size: 12.29px;
+        font-weight: 400;
+        text-align: left;
+    }
+
+    .tag2{
+        position: relative;
+        font-size: 12.49px;
+        font-weight: 400;
+        line-height: 24.38px;
+        left: 70px;
+    }
+
+    #bls1>div:nth-of-type(2){
+        grid-area: a2;
+        height: 365px;
+        width: 300px;
+        border: 1px solid #E7E6E6;
+        border-radius: 10px;
+        img{
+            position: relative;
+            left: 0.9px;
+            bottom: 0.8px;
+            border-radius: 10px 10px 0px 0px;
+        }
+
+        div{
+            padding: 5px 20px 5px 20px;
+            h2{
+                padding-top: 5px;
+                padding-bottom: 5px;
+                font-size: 15px;
+                font-weight: 600;
+                line-height: 25px;
+            }
+        }
+
+    }
+
+    .tag{
+        position: relative;
+        left: 20px;
+        font-size: 12.29px;
+        font-weight: 400;
+        text-align: left;
+    }
+
+    .tag2{
+        position: relative;
+        font-size: 12.49px;
+        font-weight: 400;
+        line-height: 24.38px;
+        left: 70px;
+    }
+
+    #bls1>div:nth-of-type(3){
+        grid-area: a3;
+        height: 365px;
+        width: 300px;
+        border: 1px solid #E7E6E6;
+        border-radius: 10px;
+        img{
+            position: relative;
+            left: 0.9px;
+            bottom: 0.8px;
+            border-radius: 10px 10px 0px 0px;
+        }
+
+        div{
+            padding: 5px 20px 5px 20px;
+            h2{
+                padding-top: 5px;
+                padding-bottom: 5px;
+                font-size: 15px;
+                font-weight: 600;
+                line-height: 25px;
+            }
+        }
+
+    }
+
+    .tag{
+        position: relative;
+        left: 20px;
+        font-size: 12.29px;
+        font-weight: 400;
+        text-align: left;
+    }
+
+    .tag2{
+        position: relative;
+        font-size: 12.49px;
+        font-weight: 400;
+        line-height: 24.38px;
+        left: 70px;
+    }
+
+    #bls1>div:nth-of-type(4){
+        grid-area: a4;
+        height: 365px;
+        width: 300px;
+        border: 1px solid #E7E6E6;
+        border-radius: 10px;
+        img{
+            position: relative;
+            left: 0.9px;
+            bottom: 0.8px;
+            border-radius: 10px 10px 0px 0px;
+        }
+
+        div{
+            padding: 5px 20px 5px 20px;
+            h2{
+                padding-top: 5px;
+                padding-bottom: 5px;
+                font-size: 15px;
+                font-weight: 600;
+                line-height: 25px;
+            }
+        }
+
+    }
+
+    .tag{
+        position: relative;
+        left: 20px;
+        font-size: 12.29px;
+        font-weight: 400;
+        text-align: left;
+    }
+
+    .tag2{
+        position: relative;
+        font-size: 12.49px;
+        font-weight: 400;
+        line-height: 24.38px;
+        left: 70px;
+    }
+
+    .circ{
+        position: relative;
+        height: 50px;
+        width: 50px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 200px;
+        left: 220px;
+        bottom: 182px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+
+    div#c>div{
+        max-width: 1320px;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 50px;
+        p{
+            position: relative;
+            right: 40px;
+        }
+    }
+
+    div#grids{
+        position: relative;
+        max-width: 1320px;
+        margin: auto;
+        display: grid;
+        grid-template-areas: "grid1 grid2 grid2 grid3"
+                             "grid4 grid5 grid6 grid3";
+        
+        margin-bottom: 100px;
+    }
+
+    #grids div{
+        width: 100%;
+        height: auto;
+        display:block;
+    }
+
+    #item1{
+        grid-area: grid1;
+    }
+
+    #item2{
+        grid-area: grid2;
+    }
+
+    #item3{
+        grid-area: grid3;
+    }
+
+    #item4{
+        grid-area: grid4;
+    }
+
+    #item5{
+        grid-area: grid5;
+    }
+
+    #item6{
+        grid-area: grid6;
+    }
+
+    div#bg{
+        display: flex;
+        
+        /* text-align: center; */
+        /* -ms-flex-align: center; */
+        background-color: #EB662B0D;
+        /* height: 716.5px; */
+    }
+
+    div.cr{
+        display: flex;
+        flex-direction: column;
+        max-width: 1320px;
+        margin: auto;
+        text-align: center;
+        align-items: center;
+        gap: 80px;
+        padding: 100px;
+    }
+
+    .quote{
+        display: flex;
+        flex-direction: column;
+        gap: 70px;
+        align-items: center;
+        img{
+            width: 60px;
+        }
+
+        p{
+            max-width: 740px;
+            font-family: Inter;
+            font-size: 19.53px;
+            font-weight: 500;
+            line-height: 37.5px;
+            text-align: center;
+
+        }
+    }
+
+    div.lables{
+        display: flex;
+        gap: 30px;
+
+    }
+
+    div.role{
+        width: 370px;
+        height: 96px;
+        top: 380.5px;
+        padding: 13px 280.36px 13px 13px;
+        gap: 0px;
+        border-radius: 200px 0px 0px 0px;
+        border: 1px 0px 0px 0px;
+        opacity: 0px;
+        width: 370px;
+        background-color: white;
+        border-radius: 200px;
+        display: flex;
+        box-shadow: 0px 6px 15px 0px #404F680D;
+        border: 1px solid #E7E6E6
+    }
+
+    .emp{
+        margin-top: 14px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .name{
+        position: relative;
+        left: 10px;
+        font-weight: 500;
+        line-height: 21px;
+        width: 100px;
+    }
+
+    .emp1{
+        margin-top: 14px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .name1{
+        width: 200px;
+        position: relative;
+        right: 32px;
+        font-weight: 500;
+        line-height: 21px;
+    }
+
+    .emp2{
+        margin-top: 14px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .name2{
+        width: 200px;
+        position: relative;
+        right: 26px;
+        font-weight: 500;
+        line-height: 21px;
+    }
+
+    .designation{
+        width: 900px;
+    }
+
+    .grid {
+            display: grid;
+            grid-gap: 30px;
+            grid-template-areas: "one two two three" "four five six three";
+        }
+        
+        .grid img:nth-child(1) {
+            grid-area: one;
+            position: relative;
+            border-radius: 12px;
+        }
+        
+        .grid img:nth-child(2) {
+            grid-area: two;
+            border-radius: 12px;
+        }
+        
+        .grid img:nth-child(3) {
+            grid-area: three;
+            border-radius: 12px;
+        }
+        
+        .grid img:nth-child(4) {
+            grid-area: four;
+            border-radius: 12px;
+        }
+        
+        .grid img:nth-child(5) {
+            grid-area: five;
+            height: 255px;
+            border-radius: 12px;
+        }
+        
+        .grid img:nth-child(6) {
+            grid-area: six;
+            border-radius: 12px;
+        }
+
+                
+        .grid {
+            max-width: 1320px;
+            margin: auto;
+            display: grid;
+            grid-template-areas: "one two two three" "four five six three";
+            grid-gap: 10px;
+        }
+
+        .grid img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .layout{
+            max-width: 1320px;
+            margin: auto;
+            margin-top: 100px;
+            margin-bottom: 100px;
+        }
+
+        .ico{
+            max-width: 1300px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .h{
+            font-size: 37.66px;
+            font-weight: 700;
+            line-height: 56px;
+            text-align: center;
+        }
+
+        .s{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            img{
+                width: 60px;
+            }
+
+            p{
+                font-weight: 400;
+            }
+        }
+
+        .act{
+            max-width: 1300px;
+            margin:auto;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .divi{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 630px;
+            height: 390.13px;
+            padding: 50px;
+            background: linear-gradient(180deg, rgba(5, 7, 60, 0) 0%, #05073C 100%);
+            border-radius: 12px;
+            margin-bottom: 100px;
+        }
+
+        .divi>div{
+            p{
+                font-size: 14.65px;
+                font-weight: 400;
+                line-height: 28.13px;
+                text-align: left;
+                font-size: 18;
+                color: white;
+            }
+
+            h1{
+                font-family: Inter;
+                font-size: 34px;
+                font-weight: 700;
+                line-height: 45px;
+                text-align: left;
+                color: white;
+            }
+
+            button{
+            padding: 15px;
+            width: 200px;
+            border-radius: 12px;
+            border: 0px solid white;
+            
+                span{
+                    font-family: Inter;
+                    font-size: 14.77px;
+                    font-weight: 500;
+                    line-height: 28px;
+                    text-align: center;
+                }
+
+            }
+    }
+
+    .travel{
+        background-color: #05073C;
+        height: 749.98px;
+        padding-top: 100px;
+    }
+
+    .head{
+        max-width: 1300px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 50px ;
+
+        h2{
+            color: white;
+        }
+
+        p{
+            color: white;
+        }
+    }
+
+    .rows{
+        max-width: 1300px;
+        margin: auto;
+        gap: 10px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .seg{
+        display: flex;
+        flex-direction: column;
+        width: 409.98px;
+    }
+
+    .seg>p:nth-of-type(1){
+            font-size: 13.89px;
+            font-weight: 400;
+            line-height: 18.2px;
+            color: white;
+        }
+    
+    .seg>p:nth-of-type(2){
+        font-size: 17.3px;
+        font-weight: 500;
+        line-height: 27px;
+        color: white;
+    }
+    
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div>
+                <img src="./stocks/logo.svg" alt="">
+                <span>Home</span>
+                <span>Tour</span>
+                <span>Destination</span>
+                <span>Activities</span>
+                <span>Pages</span>
+                <span>Contact</span>
+            </div>
+            <div>
+                <span>USD</span>
+                <span>Help</span>
+                <span>Sign Up</span>
+                <span id="login">Log in</span>
+            </div>
+        </nav>
+
+        <div id="content">
+            <div><p>One site, 300,000+ experiences you'll remember</p>
+                <h1>Your Adventure Travel Experts In World!</h1>
+            </div>
+            <img class="brush" src="./stocks/brush.svg" alt="">
+        </div><br><br>
+
+        <div class="hero_farm">
+            <div class="searchitem_button">
+                <div class="cyrcle1"></div>
+                    <div>
+                        <span>Where</span>
+                        <p>Search destinations</p>
+                    </div>
+
+            </div>
+            <div class="searchitem_button">
+                <div class="cyrcle1"></div>
+                <div>
+                    <span>When</span>
+                    <p>February 05 ~ March 14</p>
+                </div>
+            </div>
+            <div class="searchitem_button">
+                <div class="cyrcle1"></div>
+                <div>
+                    <span>Tour Type</span>
+                    <p>All tour</p>
+                </div>
+            </div>
+            <div class="cyrcle"></div>
+        </div>
+        <div id="blocks">
+            <div><img src="./stocks/beach.svg" alt="">
+            <img src="./stocks/hiking.svg" alt=""></div>
+            <div><img src="./stocks/mountain.svg" alt=""></div>
+        </div>
+    </header><br><br>
+    <div class="bl"></div>
+    <section>
+        <div id="contents">
+            <div><img src="./stocks/Amazon.svg" alt=""></div>
+            <div><img src="./stocks/AMD.svg" alt=""></div>
+            <div><img src="./stocks/Dropcom.svg" alt=""></div>
+            <div><img src="./stocks/Logitech.svg" alt=""></div>
+            <div><img src="./stocks/Spotify.svg" alt=""></div>
+            <div><img src="./stocks/Amazon.svg" alt=""></div>
+        </div>
+    <div style="height: 100px;"></div>
+    <div id="b">
+        <div>
+            <h2>Popular things to do</h2>
+            <p>See all</p>
+        </div>
+        <div id="bls">
+            <div>
+                <img src="./stocks/City Tours.svg" alt="">
+                <p>City Tours</p>
+                <p>100+ Tours</p>
+            </div>
+            <div><img src="./stocks/Cultural Tours.svg" alt="">
+                <p>Cultural Tours</p>
+                <p>100+ Tours</p>
+            </div>
+            <div><img src="./stocks/Day Cruises.svg" alt="">
+                <p>Day Cruises</p>
+                <p>100+ Tours</p>
+            </div>
+            <div><img src="./stocks/Bus Tours.svg" alt="">
+                <p>Bus Tours</p>
+                <p>100+ Tours</p>
+            </div>
+            <div><img src="./stocks/Beach Tours.svg" alt="">
+                <p>Beach Tours</p>
+                <p>100+ Tours</p>
+            </div>
+            <div><img src="./stocks/FoodTour.svg" alt="">
+                <p>Food Tours</p>
+                <p>100+ Tours</p>
+            </div>
+        </div>
+    </div>
+    <div style="height: 100px;"></div>
+    <div id="b1">
+        <div>
+            <h2>Featured Trips</h2>
+            <input type="text" name="" id="" placeholder="By Travel Style">
+        </div>
+        <div id="bls1">
+            <div>
+                <img src="./stocks/Paris, France.svg" alt="">
+                <div>
+                <p class="tag">Paris, France</p>
+                <h2>Centipede Tour - Guided Arizona
+                    Desert Tour by ATV</h2>
+                <p class="tag2">4.8 (243)</p>
+                <hr style="border-top: 1px #E7E6E6">
+                <div class="line">
+                    <p>4 Days</p>
+                    <p>From<span>$189.25</span></p>
+                </div>
+            </div>
+            <div class="circ"></div>
+            </div>
+            <div>
+                <img src="./stocks/New York, USA.svg" alt="">
+                <div>
+                <p class="tag">New York, USA</p>
+                <h2>Molokini and Turtle Town
+                    Snorkeling Adventure Aboard</h2>
+                <p class="tag2">4.8 (243)</p>
+                <hr style="border-top: 1px #E7E6E6">
+                <div class="line">
+                    <p>4 Days</p>
+                    <p>From<span>$225</span></p>
+                </div>
+            </div>
+            <div class="circ"></div>
+            </div>
+            <div>
+                <img src="./stocks/London, UK.svg" alt="">
+                <div>
+                <p class="tag">London, UK</p>
+                <h2>Westminster Walking Tour &
+                    Westminster Abbey Entry</h2>
+                <p class="tag2">4.8 (243)</p>
+                <hr style="border-top: 1px #E7E6E6">
+                <div class="line">
+                    <p>4 Days</p>
+                    <p>From<span>$943</span></p>
+                </div>
+            </div>
+            <div class="circ"></div>
+            </div>
+            <div>
+                <img src="./stocks/New York, USA1.svg" alt="">
+                <div>
+                <p class="tag">New York, USA</p>
+                <h2>All Inclusive Ultimate Circle Island
+                    Day Tour with Lunch</h2>
+                <p class="tag2">4.8 (243)</p>
+                <hr style="border-top: 1px #E7E6E6">
+                <div class="line">
+                    <p>4 Days</p>
+                    <p>From<span>$189.25</span></p>
+                </div>
+            </div>
+            <div class="circ"></div>
+            </div>
+        </div>
+    </div>
+    <div style="height: 100px;"></div>
+    <div id="c">
+        <div>
+            <h2>Trending Destinations</h2>
+            <p>See all</p>
+        </div>
+    
+</div>
+
+<div class="grid">
+    <img src="./stocks/Cruises.svg" alt="">
+    <img src="./stocks/Beach Tours (2).svg" alt="">
+    <img src="./stocks/City Tours (2).svg" alt="">
+    <img src="./stocks/Museum Tour.svg" alt="">
+    <img src="./stocks/food.png" alt="">
+    <img src="./stocks/Hiking (2).svg" alt="">
+
+</div>
+
+<div style="height: 100px;"></div>
+<div id="bg">
+    <div class="cr">
+        <h2>Customer Reviews</h2>
+        <div class="quote"><img src="./stocks/Vector.png" alt="">
+        <p>The tours in this website are great. I had been really enjoy with my family! The
+            team is very professional and taking care of the customers. Will surely
+            recommend to my friend to join this company!</p></div>
+        <div class="lables">
+            <div class="role">
+                <img src="./stocks/Albert Cole.svg" alt="">
+                <div class="emp">
+                    <p class="name">Albert Cole</p>
+                    <p class="desigination">Designer</p>
+                </div>
+            </div>
+            <div class="role">
+                <img src="./stocks/Alison Dawn.svg" alt="">
+                <div class="emp1">
+                    <p class="name1">Alison Dawn</p>
+                    <p class="desigination">WordPress Developer</p>
+                </div>
+            </div>
+            <div class="role">
+                <img src="./stocks/Daniel Parker.svg" alt="">
+                <div class="emp2">
+                    <p class="name2">Daniel Parker</p>
+                    <p class="desigination">Front-end Developer</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="layout">
+    <div class="ico">
+        <div class="s">
+        <img src="./stocks/1.svg.png" alt="">
+        <h1 class="h">932M</h1>
+        <P>Total Donations</P>
+        </div>
+        <div class="s">
+            <img src="./stocks/2.svg fill.png" alt="">
+            <h1 class="h">24M</h1>
+            <P>Campaigns Closed</P>
+        </div>
+        <div class="s">
+            <img src="./stocks/3.svg fill.png" alt="">
+            <h1 class="h">10M</h1>
+            <P>Happy People</P>
+        </div>
+        <div class="s">
+            <img src="./stocks/4.svg fill.png" alt="">
+            <h1 class="h">65M</h1>
+            <P>Our Volunteers</P>
+        </div>
+    </div>
+</div>
+    <div class="act">
+        <div class="divi">
+            <div><p>Enjoy these cool staycation promotions in Singapore</p>
+            <h1>Best staycation
+                deals</h1>
+            </div>
+            <div>
+                <button>
+                <span>See activities</span>
+            </button></div>
+        </div>
+        <div class="divi">
+            <div>
+                <p>Don't forget to check out these activities while you're here</p>
+                <h1>All Time Favourite Activities in Dubai</h1>
+                </div>
+                <div><button>
+                    <span>See activities</span>
+                </button></div>
+        </div>
+    </div>
+    <div class="travel">
+        <div class="head">
+            <h2>Travel Articles</h2>
+            <p>See all</p>
+        </div>
+        <div class="rows">
+            <div class="seg">
+                <img src="./stocks/image (2).png" alt=""><br>
+                <p>April 06 2023 | By Ali Tufan</p><br>
+                <p>Kenya vs Tanzania Safari: The Better African Safari Experience</p>
+            </div>
+            <div class="seg">
+                <img src="./stocks/image (3).png" alt=""><br>
+                <p>April 07 2023 | By Emily Johnson</p><br>
+                <p>Exploring the Serengeti: A Wildlife Adventure</p>
+            </div>
+            <div class="seg">
+                <img src="./stocks/image (4).png" alt=""><br>
+                <p>April 08 2023 | By Maxwell Rhodes</p><br>
+                <p>Into the Wild: An Unforgettable Safari Journey</p>
+            </div>
+        </div>
+
+    </div>
+
+    </section>
+</body>
+</html>
+
